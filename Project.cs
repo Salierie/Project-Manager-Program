@@ -10,6 +10,9 @@ using System.Transactions;
 using System.Xml.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Project_Manager_Pro.GUI;
+using System.Text.Json;
+using System.IO;
+
 namespace Project_Manager_Pro
 {
     abstract class Resource
@@ -3401,6 +3404,112 @@ namespace Project_Manager_Pro
                 }
             }
             return tasks;
+        }
+    }
+
+    class ProjectDataSerializer
+    {
+        private const string FILE_EXTENSION = ".json";
+        
+        public class ProjectData
+        {
+            public string ProjectName { get; set; }
+            public DateTime CurrentDate { get; set; }
+            public List<Task> Tasks { get; set; }
+            public Dictionary<string, WorkResource> WorkResources { get; set; }
+            public Dictionary<string, MaterialResource> MaterialResources { get; set; }
+
+            public ProjectData()
+            {
+                Tasks = new List<Task>();
+                WorkResources = new Dictionary<string, WorkResource>();
+                MaterialResources = new Dictionary<string, MaterialResource>();
+            }
+        }
+
+        public static string GetProjectFilePath(string projectName)
+        {
+            return Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"{projectName}{FILE_EXTENSION}");
+        }
+
+        public static bool ProjectExists(string projectName)
+        {
+            return File.Exists(GetProjectFilePath(projectName));
+        }
+
+        public static void SaveProject(ProjectManagement project)
+        {
+            var projectData = new ProjectData
+            {
+                ProjectName = project.ProjectTree.RootTask.TaskName,
+                CurrentDate = project.ProjectTree.CurrentDate,
+                Tasks = project.GetTasks(),
+                WorkResources = project.Resources.WorkResourceList,
+                MaterialResources = project.Resources.MaterialResourceList
+            };
+
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve
+            };
+
+            string jsonString = JsonSerializer.Serialize(projectData, options);
+            File.WriteAllText(GetProjectFilePath(projectData.ProjectName), jsonString);
+        }
+
+        public static ProjectManagement LoadProject(string projectName)
+        {
+            string jsonString = File.ReadAllText(GetProjectFilePath(projectName));
+            var options = new JsonSerializerOptions
+            {
+                ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve
+            };
+
+            var projectData = JsonSerializer.Deserialize<ProjectData>(jsonString, options);
+            
+            // Create new project instance
+            var project = new ProjectManagement(projectName);
+            project.SetCurrenDateOfProject(projectData.CurrentDate);
+
+            // Restore resources
+            foreach (var resource in projectData.WorkResources)
+            {
+                project.Resources.WorkResourceList[resource.Key] = resource.Value;
+            }
+            foreach (var resource in projectData.MaterialResources)
+            {
+                project.Resources.MaterialResourceList[resource.Key] = resource.Value;
+            }
+
+            // Restore tasks
+            foreach (var task in projectData.Tasks)
+            {
+                if (task.TaskNodeLevelInTree == 1)
+                {
+                    project.AddTask(task.TaskName);
+                }
+                else if (task.TaskNodeLevelInTree > 1 && task.ParentTask != null)
+                {
+                    project.AddSubtaskToTask(task.TaskName, task.ParentTask.TaskName);
+                }
+
+                // Restore task properties
+                var restoredTask = project.ProjectTree.FindTaskNode(task.TaskName);
+                if (restoredTask != null)
+                {
+                    restoredTask.StartDate = task.StartDate;
+                    restoredTask.EndDate = task.EndDate;
+                    restoredTask.Duration = task.Duration;
+                    restoredTask.Status = task.Status;
+                    restoredTask.PercentageCompleted = task.PercentageCompleted;
+                    restoredTask.TaskWorkingHoursPerDay = task.TaskWorkingHoursPerDay;
+                    restoredTask.ResourceAndCapacityDic = task.ResourceAndCapacityDic;
+                    restoredTask.Desription = task.Desription;
+                }
+            }
+
+            return project;
         }
     }
 }

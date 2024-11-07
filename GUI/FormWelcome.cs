@@ -89,7 +89,17 @@ namespace Project_Manager_Pro.GUI
                 return;
             }
 
-            PMform mainForm = new PMform(projectName, currentDatePicker.Value);
+            PMform mainForm;
+            if (ProjectDataSerializer.ProjectExists(projectName))
+            {
+                var project = ProjectDataSerializer.LoadProject(projectName);
+                mainForm = new PMform(projectName, currentDatePicker.Value, project);
+            }
+            else
+            {
+                mainForm = new PMform(projectName, currentDatePicker.Value);
+            }
+
             this.Hide();
             mainForm.FormClosed += (s, args) => this.Close();
             mainForm.Show();

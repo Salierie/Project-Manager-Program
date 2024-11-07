@@ -14,11 +14,11 @@ namespace Project_Manager_Pro.GUI
         private Button ganttChartBtn;
         private ProjectManagement projectManager;
 
-        public PMform(string? projectName, DateTime currentDate)
+        internal PMform(string? projectName, DateTime currentDate, ProjectManagement? existingProject = null)
         {
             this.projectName = projectName;
             this.currentDate = currentDate;
-            this.projectManager = new ProjectManagement(projectName ?? "Untitled Project");
+            this.projectManager = existingProject ?? new ProjectManagement(projectName ?? "Untitled Project");
             this.projectManager.SetCurrenDateOfProject(currentDate);
             InitializeComponent();
 
