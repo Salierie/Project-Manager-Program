@@ -1,0 +1,90 @@
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.exe
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.deps.json
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.runtimeconfig.json
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.sourcelink.json
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\refint\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\PRM\Project-Manager-Pro\obj\Debug\net8.0-windows\ref\Project-Manager-Pro.dll
+C:\Users\Administrator\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.exe
+C:\Users\Administrator\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.deps.json
+C:\Users\Administrator\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.runtimeconfig.json
+C:\Users\Administrator\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfoInputs.cache
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfo.cs
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.sourcelink.json
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\refint\Project-Manager-Pro.dll
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.genruntimeconfig.cache
+C:\Users\Administrator\Project-Manager-Pro\obj\Debug\net8.0-windows\ref\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.exe
+C:\Users\Administrator\Desktop\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.deps.json
+C:\Users\Administrator\Desktop\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.runtimeconfig.json
+C:\Users\Administrator\Desktop\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.sourcelink.json
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\refint\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\Project-Manager-Pro\obj\Debug\net8.0-windows\ref\Project-Manager-Pro.dll
+C:\Users\Administrator\Documents\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.exe
+C:\Users\Administrator\Documents\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.deps.json
+C:\Users\Administrator\Documents\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.runtimeconfig.json
+C:\Users\Administrator\Documents\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Documents\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfoInputs.cache
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfo.cs
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.sourcelink.json
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\refint\Project-Manager-Pro.dll
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.genruntimeconfig.cache
+C:\Users\Administrator\Documents\Project-Manager-Pro\obj\Debug\net8.0-windows\ref\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.sourcelink.json
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\refint\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.exe
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.deps.json
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.runtimeconfig.json
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\bin\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\Project-Manager-Pro.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\Fixing the stupid fucking serialization thing\Project-Manager-Pro\obj\Debug\net8.0-windows\ref\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Complete Project\bin\Debug\net8.0-windows\Project-Manager-Pro.exe
+C:\Users\Administrator\Desktop\Complete Project\bin\Debug\net8.0-windows\Project-Manager-Pro.deps.json
+C:\Users\Administrator\Desktop\Complete Project\bin\Debug\net8.0-windows\Project-Manager-Pro.runtimeconfig.json
+C:\Users\Administrator\Desktop\Complete Project\bin\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Complete Project\bin\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.sourcelink.json
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\refint\Project-Manager-Pro.dll
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.pdb
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\Project-Manager-Pro.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\Complete Project\obj\Debug\net8.0-windows\ref\Project-Manager-Pro.dll

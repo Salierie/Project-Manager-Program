@@ -1,0 +1,288 @@
+/*
+             + Variables that this program will use:
+               - string projectName, newProjectName
+               - string taskName (for each individual row on taskDataView, there is a taskName to represent it)
+               - string parentTask, newTaskName
+               - string taskID
+
+               - string Description
+
+               - string status, priority
+
+               - Datetime StartDate, EndDate
+
+               - float TaskWorkingHoursPerDay
+
+               - int Duration = ProjectManagement.SetTimeLineOfTask(taskName, StartDate, EndDate)
+
+               - int PercentageCompleted
+
+               - string ResourceName
+
+               - float stdRate
+
+               - float ovtRate
+
+               - string currency
+
+               - float hours
+
+               - int cap
+
+               - string rateUnit
+
+               - string accType
+
+            */
+            //a) main PMform.cs screen [done]
+            /*
+             ___________________________________________________________________________________________________________________________________________
+            | Project Manager: <projectName>                                                                                                | - | o | x |
+             ------------------------------------------------------------------------------------------------------------------------------------------- 
+            |  ----------------------------------------------------------------------------------------------------------------------------------       |
+            | |  |Task ID |Task Name  |Duration  |Start Date |Finish Date |Status    |Priority  |Percentage complete   |Working hours/day        |      |
+            | |-----------------------------------------------------------------------------------------------------------------------------------      |
+            | |  |<taskID>|<taskName> |<Duration>|<StartDate>| <EndDate>  |<Status>  |<Priority>|<PercentageCompleted> |<TaskWorkingHoursPerDay> |      |
+            | |                                                                                                                                  |      |
+            | |                                                                                                                                  |      |
+            |  ----------------------------------------------------------------------------------------------------------------------------------       |
+            |   ________________         ________________                                                                                               |
+            |  | Rename Project |       |  Adding Task   |                                                                                              |
+            |   ----------------         ----------------                                                                                               |
+            |  __________________       __________________             __________________         _________________                                     |
+            | |    Edit Task     |     |Edit Task Resource|           | Resource Manager |       |   Gantt Chart   |                                    |
+            |  ------------------       ------------------             ------------------         -----------------                                     |
+             -------------------------------------------------------------------------------------------------------------------------------------------
+            */            //b) Restrict user accessibility on taskViewTable to ReadOnly [done]
+
+            //c) Add functionality to buttons on main screen: [done]
+
+            //c.1) 
+            //c.1.1) > "Edit task" choice will open a window from script EditTaskForm.cs
+            /* EditTaskForm.cs
+               ______________________________________________________________________________________
+              | Edit Task                                                                | - | o | x |
+               --------------------------------------------------------------------------------------
+              |                     ________________                            ________________     |
+              |  Edit Task Name:   |   [Text box]   |        Edit Description: |   [Text Box]   |    |--> Save input to "newTaskName" and call method "ProjectManagement.ChangeTaskName(taskName, newTaskName)" then overwrite "taskName" into "newTaskName"
+              |                     ----------------                            ----------------     |
+              |                     ________________                            ________________     |
+              |  Edit Status:      | [Dropdown box] |        Edit Priority:    | [Dropdown box] |    |--> Overwrite input to "Description" and call method "ProjectManagement.AddDescriptionToTask(taskName, Description)
+              |                     ----------------                            ----------------     |              
+              |                     ________________                            ________________     |
+              |  Edit Duration:    |   [Text box]   |        Edit time limit:  |   [Text box]   |    |--> Overwrite input to "Duration" and call method "ProjectManagement.ChangeDurationOfTask(taskName, duration)
+              |                     ----------------            (hrs/day)       ----------------     |
+              |                                                                                      |
+              |                     ________________                                                 |--> Overwrite input to "status" and call method "ProjectManagement.UpdateStatusOfTask(taskName, status)
+              |  Add Dependency:   | [Dropdown box] |                                                |
+              |                     ----------------                                                 |
+              |   ------------------------------------------------------------------------------     |--> Overwrite input to "priority" and call method "ProjectManagement.SetPriorityOfTask(taskName, priority)"
+              |  |                        __________________                                    |    | 
+              |  | Enter Depending task: |    [Text Box]    |                                   |    |--> Add Dependency is a dropdown box allow you to choose 4 options "SS - FF - FS - FS" and save that input option to "dependencyType" and call method "ProjectManagement.AddDependency(taskName, dependingTaskName, dependencyType)"
+              |  |                        ------------------                                    |    |
+              |  |                 ______________                        ___________________    |    |--> Save input to "dependingTaskName" 
+              |  | Edit Lag time: |  [Text box]  |                      | Delete Dependency |   |    |--> Edit Lag time save input to "lag" and calls method "ProjectManagement.AddLagToDependency(taskName, dependingTaskName, lag)"
+              |  |                 --------------                        -------------------    |    |--> Overwrite input to "TaskWorkingHoursPerDay" and call method "ProjectManagement.SetNumberOfWorkingHoursPerDayOfTask(taskName, TaskWorkingHoursPerDay)"              
+              |   ------------------------------------------------------------------------------     |
+              |      _____________                                       ____________________        |--> Delete Task calls method "ProjectManagement.DeleteTask(taskName)" and remove the row represented by that "taskName" on taskDataTable
+              |     | Delete Task |                                     | Delete Description |       |
+              |      -------------                                       --------------------        |--> Delete Dependency calls method "ProjectManagement.DeleteDependency(taskName, dependingTaskName)"
+              |                                       ________                                       |     ________      
+              |                                      |  Save  |                                      |--> | Delete | button call the method "ProjectManagement.DeleteTask(taskName)"
+              |                                       --------                                       |     --------      
+               -------------------------------------------------------------------------------------- 
+            */
+
+            //c.1.2) > "Edit task resource" choice will open a window from script EditTaskRSForm.cs
+            /* EditTaskRSForm.cs
+               _________________________________________
+              | Edit Task Resource          | - | o | x |
+               ----------------------------------------- 
+              |                        ______________   |
+              |  Enter Resource Name: |  [Text box]  |  |--> Edit Resource name save input to "resourceName"
+              |                        --------------   |
+              |   --------------------------            |
+              |  |                          |           |
+              |  | Enter Resource Capacity: |           |         
+              |  |     ______________       |           |
+              |  |    |  [Text box]  |      |           |
+              |  |     --------------       |           |
+              |  |    _________________     |           |     
+              |  |   |[Delete Resource]|    |           |
+              |  |    -----------------     |           |
+              |   --------------------------            |
+              |   _____________________     ______      |
+              |  |[Delete All Resource]|   | Save |     |
+              |   ---------------------     ------      |
+               -----------------------------------------          
+
+            */
+
+            //c.2) renameProjectBtn labeled "Rename Project" => Open a new popup window from script RenameProjectForm.cs
+            /* RenameProject.cs
+               ________________________________________
+              | Rename Project             | - | o | x |
+               ---------------------------------------- 
+              |                          ____________  |
+              | Enter new project name: | [Text Box] | |--> Save input to "newProjectName"
+              |                          ------------  | 
+              |                 ______                 |     ______ 
+              |                | Save |                |--> | Save | button save and call method, ProjectManagement.ChangeProjectName(projectName, newProjectName), overwrite "projectName" with "newProjectName" and then reload the PMform.cs screen (still keeping all the information prior)
+              |                 ------                 |     ------ 
+               ---------------------------------------- 
+            
+            */
+
+            //c.4) addTaskBtn labeled "Adding Task" => Open a New window from script AddingTaskForm.cs
+            /* AddingTaskForm.cs
+               ________________________________________
+              | Adding Task                | - | o | x |
+               ----------------------------------------   
+              |                    ________________    |
+              | Enter Task Name:  |   [Text box]   |   |--> Save input to "taskName" and call method "ProjectManagement.AddTask(taskName)"
+              |                    ----------------    |
+              |                    ________________    |
+              | Enter Parent task:|   [Text box]   |   |--> Save input to "parentTask" and call method "ProjectManagement.AddSubtaskToTask(taskName, parentTask)" //For if this task is a subtask of another task
+              |                    ----------------    |
+              |                    ________________    |
+              | Description:      |   [Text Box]   |   |--> Save input to "Description" and call method "ProjectManagement.AddDescriptionToTask(taskName, Description)
+              |                    ----------------    |
+              |                    ________________    |
+              | Start Date:       |[DatetimePicker]|   |--> Save input to "StartDate"
+              |                    ----------------    | 
+              |                    ________________    |
+              | End Date:         |[DatetimePicker]|   |--> Save input to "EndDate"
+              |                    ----------------    | 
+              |                    ________________    |
+              | Set Status:       | [Dropdown box] |   |--> Save input to "status" and call method "ProjectManagement.UpdateStatusOfTask(taskName, status)"
+              |                    ----------------    |     
+              |                    ________________    |
+              | Set Priority:     | [Dropdown box] |   |--> Save input to "priority" and call method "ProjectManagement.SetPriorityOfTask(taskName, priority)"
+              |                    ----------------    |       
+              |                    ________________    |
+              | Set time limit:   |   [Text box]   |   |--> Save input to "TaskWorkingHoursPerDay" and call method "ProjectManagement.SetNumberOfWorkingHoursPerDayOfTask(taskName, TaskWorkingHoursPerDay)"
+              |    (hrs/day)       ----------------    |
+              |               ______                   |   ______   
+              |              | Save |                  |  | Save |: Save button save the change, then update taskViewTable by create a new row for it in that structure above
+              |               ------                   |   ------
+               ----------------------------------------                               
+            */
+            
+            //c.5) resourceManagementBtn labeled "Resource Manager" => Open a new window from script RSform.cs
+            /* RSform.cs
+             _____________________________________________________________________________________________________________________________
+            | Resource Manager: projectName                                                                                   | - | o | x |
+             ----------------------------------------------------------------------------------------------------------------------------- 
+            |   ------------------------------------------------------------------------------------------------------------------------  |
+            |  |    |Resource Name  |Type           |Material         |Max Capacity    |Std. Rate      |Overtime Rate  |Cost   |Accrue  | |
+            |  |------------------------------------------------------------------------------------------------------------------------| |
+            |  |    |<resourceName> |<resourceType> |<materialRsName> |<maxRsCapacity> |<standardRate> |<overtimeRate> |<cost> |<accrue>| |
+            |  |                                                                                                                        | |
+            |  |                                                                                                                        | |
+            |  |                                                                                                                        | |
+            |  |                                                                                                                        | |
+            |  |                                                                                                                        | |
+            |   ------------------------------------------------------------------------------------------------------------------------  |
+            |         ___________________                         _______________________                          _______________        |
+            |        | Add Work Resource |                       | Add Material Resource |                        | Edit Resource |       |
+            |         -------------------                         -----------------------                          ---------------        |
+             ----------------------------------------------------------------------------------------------------------------------------- 
+            */
+            //c.5.1) addWorkRSBtn button labeled "Add Work Resource" will open a window from script "AddWRSForm.cs"
+            /* AddWRSForm.cs
+               ________________________________________
+              | Adding Work Resource       | - | o | x |
+               ---------------------------------------- 
+              |                    ________________    |
+              | Enter Resource:   |   [Text box]   |   |
+              |                    ----------------    |
+              |                    ________________    |
+              | Set Standard Rate:|   [Text box]   |   |
+              |                    ----------------    |
+              |                    ________________    |
+              | Set Overtime Rate:|   [Text Box]   |   |
+              |                    ----------------    |
+              |                    ________________    |
+              | Set Capacity:     |   [Text Box]   |   |
+              |                    ----------------    |
+              |                    ________________    |
+              | Set Accrue Type:  |   [Text Box]   |   |
+              |                    ----------------    |
+              |                    ________________    |
+              | Set work limit:   |   [Text box]   |   |
+              |    (hrs/day)       ----------------    |
+              |               ______                   |
+              |              | Save |                  |
+              |               ------                   |
+               ---------------------------------------- 
+            */
+            //c.5.2) addMaterialRSBtn button labeled "Add Material Resource" will open a window from script "AddMRSForm.cs"
+            /* AddMRSForm.cs
+               ________________________________________
+              | Adding Material Resource   | - | o | x |
+               ---------------------------------------- 
+              |                    ________________    |
+              | Enter Resource:   |   [Text box]   |   |
+              |                    ----------------    |
+              |                    ________________    |
+              | Set Standard Rate:|   [Text box]   |   |
+              |                    ----------------    |
+              |                    ________________    |
+              | Set Rate Unit:    |   [Text Box]   |   |
+              |                    ----------------    |
+              |               ______                   |
+              |              | Save |                  |
+              |               ------                   |
+               ---------------------------------------- 
+            */
+            //c.5.3) editResourceBtn button labeled "Edit Resource" will open a window from script "EditResourceForm.cs"
+            /* EditResourceForm.cs
+               ______________________________________________________________________________________
+              | Edit Resource                                                            | - | o | x |
+               --------------------------------------------------------------------------------------
+              |                       ________________                         ________________      |
+              |  Enter Resource Name:|   [Text box]   |      Resource Type:   | [Dropdown box] |     |
+              |                       ----------------                         ----------------      |
+              |                       ________________                                               |
+              |  New Resource name:  | [Dropdown box] |                                              |
+              |                       ----------------                                               |
+              |                       ________________                                               |
+              |  Set Currency:       |   [Text box]   |                                              |
+              |                       ----------------                                               |
+              |   ____________________                                              ________         |
+              |  | [Delete  Resource] |                                            |  Save  |        |
+              |   --------------------                                              --------         |
+               --------------------------------------------------------------------------------------                
+            */
+            //c.6) ganttChartBtn labeled "Gantt Chart" => Open a new window from script GCform.cs
+            /* GCform.cs                        
+             _______________________________________________________________________________________________________________________________________________________________
+            | Gantt Chart                                                                                                                                       | - | o | x |
+             ---------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+            |  ----------------------------------------------------------------------- -------------------------------------------------------------------------------------  |
+            | |                                                                       |                           |                           |                             | |
+            | |                                                                       |                           |                           |                             | |
+            | |      Project: <Project Name> //Big font                               |                           |                           |                             | |
+            | |                                                                       |                           |                           |                             | |
+            | |                                                                       |                           |                           |                             | |
+            | |            Current Date: dd/mm/yyyy                                   |                           |                           |                             | |
+            | |                                                                       |                           |                           |                             | |
+            | |                                                                       |                           |                           |                             | |       
+            |  ----------------------------------------------------------------------- --------------------------- --------------------------- -----------------------------  |
+            | |  |Task Name |Start Date |Finish Date |Duration  |Percentage Complete  | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 || |
+            | |-------------------------------------------------------------------------------------------------------------------------------------------------------------  |
+            | |  |<taskName>|<StartDate>|<EndDate>   |<Duration>|<PercentageComplete> |                                                                                     | |
+            | |  |                                                                    |                                                                                     | |
+            | |  |                                                                    |                                                                                     | |
+            | |  |                                                                    |                                                                                     | |
+            | |  |                                                                    |                                                                                     | |
+            | |  |                                                                    |                                                                                     | |
+            | |  |                                                                    |                                                                                     | |
+            | |  |                                                                    |                                                                                     | |
+            |  ----------------------------------------------------------------------- -------------------------------------------------------------------------------------  |
+            |                                                                                                                                                                 |
+             -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+            
+            */
+            // 
+              
