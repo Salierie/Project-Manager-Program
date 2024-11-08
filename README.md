@@ -6,9 +6,7 @@ Phần mềm quản lý dự án là công cụ hỗ trợ đắc lực trong vi
 
 ![Màn hình chính](Preview/Main_Screen.png)
 ## II - Cài đặt và sử dụng
-1. Tải ![Project Manager Pro](Project_Manager_Pro.zip) và giải nén
-2. Chạy file `Project_Manager_Pro.exe`
-* ![Project-Manager-Pro.exe](Preview/PMPexe.png)
+
 
 ## III - Chức năng
 
