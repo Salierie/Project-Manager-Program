@@ -74,7 +74,14 @@ cd Project-Manager-Program
 
 ## IV - Tham khảo
 - [jakesee - GanttChart](https://github.com/jakesee/ganttchart)
-- [Microsoft Project](https://en.wikipedia.org/wiki/Microsoft_Project)
+- [Microsoft Project 2016 Step by Step](http://cnaiman.com/PM/MIT-LabText/2016/MP.2016.Step.by.Step.pdf)
+- [PDM – Precedence Diagramming Method](https://project-management.info/pdm-precedence-diagramming-method/)
+- [Purpose of Precedence Diagram Method (PDM)](https://acqnotes.com/acqnote/tasks/precedence-diagram-method-pdm)
+- [Adding Resource Management in Microsoft Project - Including a Gantt Chart](https://www.youtube.com/watch?v=dfTCMA9lqr0)
+- [Managing Resources in Microsoft Project](https://www.youtube.com/watch?v=XB36X8x8er8&t=165s)
+- [How to Create a Gantt Chart in Microsoft Project](https://www.youtube.com/watch?v=uqo5DLD-ssI&t=173s)
+- [How to Create a Basic Gantt Chart in Microsoft Project 2022](https://www.youtube.com/watch?v=kOs91q2advw)
+- [Task Status in MS Project 2016](https://www.youtube.com/watch?v=_TOyTWjonEQ&t=13s)
 
 
 ## Thành viên đóng góp:
