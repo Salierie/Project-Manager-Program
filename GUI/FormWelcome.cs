@@ -28,7 +28,6 @@ namespace Project_Manager_Pro.GUI
                 AutoSize = true
             };
             
-            ///
             Label projectLabel = new Label
             {
                 Text = "Enter project name:",
@@ -90,6 +89,7 @@ namespace Project_Manager_Pro.GUI
             }
 
             PMform mainForm = new PMform(projectName, currentDatePicker.Value);
+
             this.Hide();
             mainForm.FormClosed += (s, args) => this.Close();
             mainForm.Show();

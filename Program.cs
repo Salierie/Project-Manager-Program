@@ -10,7 +10,7 @@ static class Program
     [STAThread]
     static void Main()
     {
-        
-        TestCase.RunTest();
+        Application.Run(new FormWelcome());
+        //TestCase.RunTest();
     }
 }

@@ -12,7 +12,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using Project_Manager_Pro.GUI;
 using System.Text.Json;
 using System.IO;
-
+using System.Runtime.Serialization;
 namespace Project_Manager_Pro
 {
     abstract class Resource
@@ -3406,4 +3406,91 @@ namespace Project_Manager_Pro
             return tasks;
         }
     }
+
+    [DataContract]
+    public class ProjectData
+    {
+        [DataMember]
+        public string ProjectName { get; set; }
+
+        [DataMember]
+        public DateTime CurrentDate { get; set; }
+
+        [DataMember]
+        public List<TaskData> Tasks { get; set; }
+
+        [DataMember]
+        public List<ResourceData> Resources { get; set; }
+
+        public ProjectData()
+        {
+            Tasks = new List<TaskData>();
+            Resources = new List<ResourceData>();
+        }
+    }
+
+    [DataContract]
+    public class TaskData
+    {
+        [DataMember]
+        public string TaskID { get; set; }
+
+        [DataMember]
+        public string TaskName { get; set; }
+
+        [DataMember]
+        public int Duration { get; set; }
+
+        [DataMember]
+        public DateTime StartDate { get; set; }
+
+        [DataMember]
+        public DateTime EndDate { get; set; }
+
+        [DataMember]
+        public string Status { get; set; }
+
+        [DataMember]
+        public string Priority { get; set; }
+
+        [DataMember]
+        public int PercentageCompleted { get; set; }
+
+        [DataMember]
+        public float WorkingHoursPerDay { get; set; }
+
+        [DataMember]
+        public List<string> Description { get; set; }
+
+        [DataMember]
+        public Dictionary<string, int> ResourceAndCapacity { get; set; }
+
+        public TaskData()
+        {
+            Description = new List<string>();
+            ResourceAndCapacity = new Dictionary<string, int>();
+        }
+    }
+
+    [DataContract]
+    public class ResourceData
+    {
+        [DataMember]
+        public string ResourceName { get; set; }
+
+        [DataMember]
+        public string Type { get; set; }
+
+        [DataMember]
+        public int MaxCapacity { get; set; }
+
+        [DataMember]
+        public float StandardRate { get; set; }
+
+        [DataMember]
+        public float OvertimeRate { get; set; }
+
+        [DataMember]
+        public string Accrue { get; set; }
+    }    
 }

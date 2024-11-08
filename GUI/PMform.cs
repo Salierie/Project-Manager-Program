@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using System.Text.Json;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace Project_Manager_Pro.GUI
 {
@@ -25,7 +26,7 @@ namespace Project_Manager_Pro.GUI
             InitializeComponent();
 
 
-            AddSampleData(); // Add data sample data 
+        //    AddSampleData(); // Add data sample data 
             RefreshTaskView();
         }
 
@@ -383,6 +384,93 @@ namespace Project_Manager_Pro.GUI
                     }
                 }
             };
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            SaveProjectData();
+        }
+
+        private void SaveProjectData()
+        {
+            try
+            {
+                var projectData = new ProjectData
+                {
+                    ProjectName = projectName,
+                    CurrentDate = currentDate
+                };
+
+                // Save tasks
+                foreach (var task in projectManager.GetTasks())
+                {
+                    if (task.TaskNodeLevelInTree == 0) continue;
+
+                    var taskData = new TaskData
+                    {
+                        TaskID = task.TaskID,
+                        TaskName = task.TaskName,
+                        Duration = task.Duration,
+                        StartDate = task.StartDate,
+                        EndDate = task.EndDate,
+                        Status = task.Status,
+                        Priority = task.Priority,
+                        PercentageCompleted = task.PercentageCompleted,
+                        WorkingHoursPerDay = task.TaskWorkingHoursPerDay,
+                        Description = task.Desription,
+                        ResourceAndCapacity = task.ResourceAndCapacityDic
+                    };
+
+                    projectData.Tasks.Add(taskData);
+                }
+
+                // Save resources
+                foreach (var resource in projectManager.Resources.WorkResourceList)
+                {
+                    var resourceData = new ResourceData
+                    {
+                        ResourceName = resource.Value.ResourceName,
+                        Type = "Work",
+                        MaxCapacity = resource.Value.AvailableCapacity,
+                        StandardRate = resource.Value.StandardRate,
+                        OvertimeRate = resource.Value.OvertimeRate,
+                        Accrue = resource.Value.Accrue
+                    };
+                    projectData.Resources.Add(resourceData);
+                }
+
+                foreach (var resource in projectManager.Resources.MaterialResourceList)
+                {
+                    var resourceData = new ResourceData
+                    {
+                        ResourceName = resource.Value.ResourceName,
+                        Type = "Material",
+                        MaxCapacity = 1,
+                        StandardRate = resource.Value.StandardRate,
+                        OvertimeRate = 0,
+                        Accrue = "End"
+                    };
+                    projectData.Resources.Add(resourceData);
+                }
+
+                // Serialize and save
+                var serializer = new DataContractSerializer(typeof(ProjectData));
+                string filePath = Path.Combine(Application.StartupPath, $"{projectName}.xml");
+                
+                using (FileStream fs = new FileStream(filePath, FileMode.Create))
+                {
+                    serializer.WriteObject(fs, projectData);
+                }
+
+                MessageBox.Show("Project saved successfully!", "Save Complete", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving project: {ex.Message}", "Save Error", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }
