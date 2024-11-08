@@ -13,6 +13,7 @@ using Project_Manager_Pro.GUI;
 using System.Text.Json;
 using System.IO;
 using System.Runtime.Serialization;
+
 namespace Project_Manager_Pro
 {
     abstract class Resource
