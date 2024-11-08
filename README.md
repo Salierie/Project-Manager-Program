@@ -74,7 +74,7 @@ cd Project-Manager-Program
 
 
 ## Thành viên đóng góp:
-I - Hồ Ngọc Bảo
-II - Huỳnh Thiên Văn
-III - Tô Xuân Đông
-IV - Hoàng San
+- I. Hồ Ngọc Bảo
+- II. Huỳnh Thiên Văn
+- III. Tô Xuân Đông
+- IV.  Hoàng San
