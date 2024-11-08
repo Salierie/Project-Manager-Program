@@ -67,7 +67,7 @@ cd Project-Manager-Program
 
 ![Màn hình chào mừng](Preview/Welcome_Screen.png)
 ![Mần hình chính](Preview/Main_Screen.png)
-![Màn hình giao diện chỉnh sửa công việc](Preview/Edit_Task_Screen.png)
+![Màn hình giao diện chỉnh sửa công việc](Preview/Edit_task_screen.png)
 ![Màn hình giao diện quản lý nguồn lực của công việc](Preview/Task_Resource_Screen.png)
 ![Màn hình quản lý nguồn lực](Preview/Resources_Manager_Screen.png)
 ![Màn hình biểu đồ Gantt](Preview/GanttChart_Screen.png)
