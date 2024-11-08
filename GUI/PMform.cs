@@ -26,7 +26,7 @@ namespace Project_Manager_Pro.GUI
             InitializeComponent();
 
 
-        //    AddSampleData(); // Add data sample data 
+            //AddSampleData(); // Add data sample data 
             RefreshTaskView();
         }
 
