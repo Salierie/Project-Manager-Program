@@ -4,7 +4,7 @@
 ### Phần mềm quản lý
 Phần mềm quản lý dự án là công cụ hỗ trợ đắc lực trong việc lập kế hoạch, theo dõi và quản lý các dự án. Phần mềm cho phép người dùng tạo và quản lý các công việc, phân bổ nguồn lực, thiết lập mối quan hệ phụ thuộc giữa các task, theo dõi tiến độ và tạo biểu đồ Gantt trực quan. Với các tính năng như quản lý thời gian, nguồn lực và chi phí, phần mềm giúp các nhà quản lý dự án tối ưu hóa quy trình làm việc, nâng cao hiệu quả và đảm bảo dự án được hoàn thành đúng tiến độ.
 
-![Màn hình chính](Image/Main_Screen.png)
+![Màn hình chính](Preview/Main_Screen.png)
 
 ## II - Cài đặt và sử dụng
 ### Cách cài đặt
@@ -65,12 +65,12 @@ cd Project-Manager-Program
 
 ## III - Chức năng
 
-![Màn hình chào mừng](Image/Welcome_Screen.png)
-![Mần hình chính](Image/Main_Screen.png)
-![Màn hình giao diện chỉnh sửa công việc](Image/Edit_Task_Screen.png)
-![Màn hình giao diện quản lý nguồn lực của công việc](Image/Task_Resource_Screen.png)
-![Màn hình quản lý nguồn lực](Image/Resources_Manager_Screen.png)
-![Màn hình biểu đồ Gantt](Image/GanttChart_Screen.png)
+![Màn hình chào mừng](Preview/Welcome_Screen.png)
+![Mần hình chính](Preview/Main_Screen.png)
+![Màn hình giao diện chỉnh sửa công việc](Preview/Edit_Task_Screen.png)
+![Màn hình giao diện quản lý nguồn lực của công việc](Preview/Task_Resource_Screen.png)
+![Màn hình quản lý nguồn lực](Preview/Resources_Manager_Screen.png)
+![Màn hình biểu đồ Gantt](Preview/GanttChart_Screen.png)
 
 
 ## Thành viên đóng góp:
