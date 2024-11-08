@@ -72,9 +72,13 @@ cd Project-Manager-Program
 ![Màn hình quản lý nguồn lực](Preview/Resources_Manager_Screen.png)
 ![Màn hình biểu đồ Gantt](Preview/GanttChart_Screen.png)
 
+## IV - Tham khảo
+- [jakesee - GanttChart](https://github.com/jakesee/ganttchart)
+- [Microsoft Project](https://en.wikipedia.org/wiki/Microsoft_Project)
+
 
 ## Thành viên đóng góp:
-- I. Hồ Ngọc Bảo
-- II. Huỳnh Thiên Văn
+- [I. Hồ Ngọc Bảo](https://github.com/ZukiErudo)
+- [II. Huỳnh Thiên Văn](https://github.com/Salierie)
 - III. Tô Xuân Đông
 - IV.  Hoàng San
