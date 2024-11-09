@@ -231,27 +231,26 @@ namespace Project_Manager_Pro.GUI
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            string newTaskName = taskNameTextBox.Text.Trim();
-            if (string.IsNullOrWhiteSpace(newTaskName))
+            // Only validate task name if it's provided
+            if (!string.IsNullOrWhiteSpace(taskNameTextBox.Text))
             {
-                MessageBox.Show("Task name cannot be empty.", "Validation Error", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                string newTaskName = taskNameTextBox.Text.Trim();
+                
+                // Check for reserved task names (case-insensitive)
+                if (newTaskName.Equals("Start", StringComparison.OrdinalIgnoreCase) || 
+                    newTaskName.Equals("End", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("'Start' and 'End' are reserved task names and cannot be used.", 
+                        "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            // Check for reserved task names (case-insensitive)
-            if (newTaskName.Equals("Start", StringComparison.OrdinalIgnoreCase) || 
-                newTaskName.Equals("End", StringComparison.OrdinalIgnoreCase))
-            {
-                MessageBox.Show("'Start' and 'End' are reserved task names and cannot be used.", 
-                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Save task changes
-            if (taskName != newTaskName)
-            {
-                projectManager.ChangeTaskName(taskName, newTaskName);
+                // Only update task name if it has changed
+                if (taskName != newTaskName)
+                {
+                    projectManager.ChangeTaskName(taskName, newTaskName);
+                    taskName = newTaskName; // Update the taskName field with the new name
+                }
             }
 
             projectManager.UpdateStatusOfTask(taskName, statusComboBox.Text);

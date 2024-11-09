@@ -146,11 +146,13 @@ namespace Project_Manager_Pro.GUI
 
             try
             {
-                projectManager.AddTask(taskName);
-
                 if (!string.IsNullOrWhiteSpace(parentTaskTextBox.Text))
                 {
                     projectManager.AddSubtaskToTask(taskName, parentTaskTextBox.Text);
+                }
+                else
+                {
+                    projectManager.AddTask(taskName);
                 }
 
                 if (!string.IsNullOrWhiteSpace(descriptionTextBox.Text))
