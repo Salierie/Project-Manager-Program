@@ -88,4 +88,3 @@ cd Project-Manager-Program
 - [I. Hồ Ngọc Bảo](https://github.com/ZukiErudo)
 - [II. Huỳnh Thiên Văn](https://github.com/Salierie)
 - III. Tô Xuân Đông
-- IV.  Hoàng San
