@@ -87,4 +87,3 @@ cd Project-Manager-Program
 ## Thành viên đóng góp:
 - [I. Hồ Ngọc Bảo](https://github.com/ZukiErudo)
 - [II. Huỳnh Thiên Văn](https://github.com/Salierie)
-- III. Tô Xuân Đông
